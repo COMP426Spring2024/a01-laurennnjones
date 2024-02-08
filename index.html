@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The World of Percy Jackson</title>
-    <link rel="stylesheet" href="styles.css"> <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Custom Cursor Style -->
+    <style type="text/css">
+        * {
+            cursor: url(https://ani.cursors-4u.net/cursors/cur-13/cur1156.ani),
+                    url(https://ani.cursors-4u.net/cursors/cur-13/cur1156.png),
+                    auto !important;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to the World of Percy Jackson</h1>
-    </header>
-    
     <nav>
+        <!-- Navigation menu -->
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="arrival.html">Percy's Arrival</a></li>
@@ -20,17 +25,29 @@
         </ul>
     </nav>
 
+    <div class="video-background">
+        <!-- Video background -->
+        <iframe src="https://www.youtube.com/embed/fG_X-cx5Szg?autoplay=1&mute=1&controls=0&loop=1&playlist=fG_X-cx5Szg" frameborder="0" allowfullscreen></iframe>
+        <div class="title-content">
+            <!-- Title content -->
+            <h1>Welcome to the World of Percy Jackson</h1>
+            <!-- Additional title content -->
+        </div>
+    </div>    
+
     <main id="main-content">
+        <!-- Main content sections -->
         <section>
             <h2>Discover the Adventures of Percy Jackson</h2>
             <p>Join Percy Jackson, a modern-day demigod, as he discovers his heritage and battles mythical creatures in the magical world of Camp Half-Blood.</p>
+            <!-- Image related to Percy Jackson -->
             <img src="path_to_camp_half_blood_image.jpg" alt="Camp Half-Blood">
         </section>
 
         <section class="highlight">
             <h2>Explore the Camp</h2>
             <p>Learn more about the mythical camp for demigods, located on the Long Island Sound.</p>
-            <!-- Selector for interactive element -->
+            <!-- Interactive element for camp features -->
             <label for="camp-features">Choose a feature to explore:</label>
             <select name="camp-features" id="camp-features">
                 <option value="the-big-house">The Big House</option>
@@ -39,10 +56,26 @@
                 <!-- Add more options as needed -->
             </select>
         </section>
-    </main>
 
+        <div class="carousel">
+            <!-- Carousel for navigating between pages -->
+            <a href="arrival.html" class="carousel-item">
+                <img src="Images/PercyWithWave.png" alt="Percy's Arrival">
+                <span class="caption">Percy's Arrival</span>
+            </a>
+            <a href="heritage.html" class="carousel-item">
+                <img src="PoseidonAndSea.jpg" alt="Son of Poseidon">
+                <span class="caption">Son of Poseidon</span>
+            </a>
+            <a href="cabin.html" class="carousel-item">
+                <img src="PercyInCabin.png" alt="Poseidon Cabin">
+                <span class="caption">Poseidon Cabin</span>
+            </a>
+        </div>
+    </main>
     <footer>
-        <p>&copy; 2024 Percy Jackson Fan Page</p>
+        <p>&copy; The Power of Poseidon's Percy Jackson</p>
+        <img src="https://github.com/COMP426Spring2024/a01-laurennnjones/blob/main/Images/PoseidonTrident.png" alt="Footer Image">
     </footer>
 </body>
 </html>

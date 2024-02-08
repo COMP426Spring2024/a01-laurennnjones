@@ -1,22 +1,26 @@
 /* General Styles */
 body {
     font-family: 'Droid Serif', sans-serif;
-    background-color: #e0f7fa;
+    background-color: white; 
     color: #333333;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #01579b;
+    background-color: #01579b; /* Darker ocean blue */
     color: white;
     text-align: center;
     padding: 10px 0;
 }
 
 nav {
-    background-color: #0277bd;
+    background-color: white; /* White background */
+    color: #01579b; /* Darker ocean blue */
+    text-align: center;
     padding: 10px 0;
+    position: relative; /* Ensure the video background respects the position of the navigation bar */
+    z-index: 1; /* Ensure the navigation bar appears above other content */
 }
 
 nav ul {
@@ -32,7 +36,7 @@ nav ul li {
 }
 
 nav a {
-    color: white;
+    color:  #1d8eb3; /* Medium ocean blue */
     text-decoration: none;
     font-weight: bold;
 }
@@ -41,13 +45,40 @@ nav a:hover {
     text-decoration: underline;
 }
 
+.video-background {
+    position: relative;
+    width: 100%; /* Take up 100% of the width of its parent */
+    height: 500px; /* Adjust this value to suit your design */
+    overflow: hidden; /* Hide any overflowing content */
+}
+
+.video-background iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; /* Remove any default border */
+    transform: scale(2); /* Adjust the scale factor as needed to zoom in on the video */
+    object-fit: cover; /* Stretch the video to fill the container, if you still want to stretch it */
+}
+
+.title-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Ensures the text appears above the video */
+    color: white; /* Or any color that makes the text readable on the video */
+}
+
 main {
     padding: 20px;
     text-align: center;
 }
 
 footer {
-    background-color: #01579b;
+    background-color: #01579b; /* Darker ocean blue */
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -58,14 +89,15 @@ footer {
 
 /* Specific Element Styles */
 .highlight {
-    background-color: #b3e5fc;
+    background-color: #b3e5fc; /* Soft seafoam */
+    border: 2px solid #0277bd; /* Bright ocean blue */
     padding: 10px;
     margin-top: 20px;
     border-radius: 5px;
 }
 
 img {
-    border: 1px solid #000;
+    border: 2px solid #0277bd; /* Bright ocean blue */
     width: 200px;
     height: auto;
     margin-top: 20px;
@@ -87,9 +119,58 @@ h1, h2 {
     font-family: 'Cinzel', serif;
 }
 
+h2 {
+    color:  #1d8eb3; /* Medium ocean blue */
+    font-family: 'Merriweather', serif; /* Flowy font */
+}
+
 /* ID and Class-based Selectors */
 #main-content {
     width: 80%;
     margin: auto;
 }
 
+.carousel {
+    display: flex;
+    justify-content: center; /* Centers the items horizontally */
+    align-items: center; /* Centers the items vertically */
+}
+
+.carousel-item {
+    margin: 0 10px; /* Spacing between items */
+    /* Other styling */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.carousel-item .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.carousel-item:hover .caption {
+    visibility: visible;
+    opacity: 1;
+}
+
+footer img {
+    width: 100px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 10px; /* Adjust top margin as needed */
+}
+
+/* Start https://www.cursors-4u.com */ 
+* {cursor: url(https://ani.cursors-4u.net/cursors/cur-13/cur1156.ani), url(https://ani.cursors-4u.net/cursors/cur-13/cur1156.png), auto !important;} 
+/* End https://www.cursors-4u.com */
