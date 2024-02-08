@@ -12,6 +12,10 @@
                     url(https://ani.cursors-4u.net/cursors/cur-13/cur1156.png),
                     auto !important;
         }
+        /* Remove border around images */
+        img {
+            border: none;
+        }
     </style>
 </head>
 <body>
@@ -30,7 +34,7 @@
         <iframe src="https://www.youtube.com/embed/fG_X-cx5Szg?autoplay=1&mute=1&controls=0&loop=1&playlist=fG_X-cx5Szg" frameborder="0" allowfullscreen></iframe>
         <div class="title-content">
             <!-- Title content -->
-            <h1>Welcome to the World of Percy Jackson</h1>
+            <img src="Images/PercyJacksonLogo.png" alt="Camp Half-Blood">
             <!-- Additional title content -->
         </div>
     </div>    
@@ -38,23 +42,10 @@
     <main id="main-content">
         <!-- Main content sections -->
         <section>
-            <h2>Discover the Adventures of Percy Jackson</h2>
-            <p>Join Percy Jackson, a modern-day demigod, as he discovers his heritage and battles mythical creatures in the magical world of Camp Half-Blood.</p>
+            <h2>Welcome to the World of Percy Jackson</h2>
+            <p>Embark on an unforgettable adventure with Percy Jackson, a young demigod whose life takes a thrilling turn when he discovers his divine heritage. Born to a mortal mother and Poseidon, the god of the sea, Percy's journey is fraught with danger, friendship, and discovery.</p>
+            <p>The story begins when Percy learns that he is a demigod, a child of a Greek god and a mortal. As he struggles to come to terms with his newfound identity, he is thrust into a world filled with monsters, gods, and ancient prophecies. Accompanied by his friends Annabeth Chase and Grover Underwood, Percy navigates the treacherous waters of the mythical world, facing challenges that test his courage and resolve at every turn. From battling the Minotaur in the heart of the Labyrinth to braving the depths of the Underworld, Percy's journey is filled with perilous quests and unexpected allies. But amidst the chaos and danger, Percy discovers the true meaning of friendship, loyalty, and sacrifice. With each victory and defeat, he grows stronger, honing his powers and uncovering the secrets of his past.</p>
             <!-- Image related to Percy Jackson -->
-            <img src="path_to_camp_half_blood_image.jpg" alt="Camp Half-Blood">
-        </section>
-
-        <section class="highlight">
-            <h2>Explore the Camp</h2>
-            <p>Learn more about the mythical camp for demigods, located on the Long Island Sound.</p>
-            <!-- Interactive element for camp features -->
-            <label for="camp-features">Choose a feature to explore:</label>
-            <select name="camp-features" id="camp-features">
-                <option value="the-big-house">The Big House</option>
-                <option value="the-forest">The Forest</option>
-                <option value="the-arena">The Arena</option>
-                <!-- Add more options as needed -->
-            </select>
         </section>
 
         <div class="carousel">
@@ -64,18 +55,56 @@
                 <span class="caption">Percy's Arrival</span>
             </a>
             <a href="heritage.html" class="carousel-item">
-                <img src="PoseidonAndSea.jpg" alt="Son of Poseidon">
+                <img src="Images/PoseidonAndSea.jpg" alt="Son of Poseidon">
                 <span class="caption">Son of Poseidon</span>
             </a>
             <a href="cabin.html" class="carousel-item">
-                <img src="PercyInCabin.png" alt="Poseidon Cabin">
+                <img src="Images/PercyInCabin.png" alt="Poseidon Cabin">
                 <span class="caption">Poseidon Cabin</span>
             </a>
         </div>
+
+        <section class="highlight">
+            <h2>What Your Favorite Character Says About You</h2>
+            <p>Each character in the Percy Jackson series embodies unique traits and values. Choose your favorite character to see what it might say about your own personality:</p>
+            <!-- Interactive element for character selection -->
+            <label for="favorite-character">Select your favorite character:</label>
+            <select id="favorite-character" onchange="showCharacterMeaning()">
+                <option value="">--Please choose an option--</option>
+                <option value="percy">Percy Jackson</option>
+                <option value="annabeth">Annabeth Chase</option>
+                <option value="grover">Grover Underwood</option>
+            </select>
+            <div id="character-meaning"></div>
+        </section>
+        
+        <script>
+        function showCharacterMeaning() {
+            var character = document.getElementById("favorite-character").value;
+            var meaningText = document.getElementById("character-meaning");
+            switch(character) {
+                case "percy":
+                    meaningText.innerHTML = "<p><strong>Percy Jackson:</strong> You're brave, loyal, and have a natural leadership quality. Like Percy, you're not afraid to stand up for what's right and protect your friends.</p>";
+                    break;
+                case "annabeth":
+                    meaningText.innerHTML = "<p><strong>Annabeth Chase:</strong> You value wisdom and courage. Your analytical mind and strategic thinking resemble Annabeth's, indicating you're a problem-solver who faces challenges head-on.</p>";
+                    break;
+                case "grover":
+                    meaningText.innerHTML = "<p><strong>Grover Underwood:</strong> You're compassionate and deeply care about the environment and your friends. Like Grover, you're loyal, kind-hearted, and a true guardian of those you love.</p>";
+                    break;
+                default:
+                    meaningText.innerHTML = "";
+            }
+        }
+        </script>
+        
+        
+        
     </main>
     <footer>
         <p>&copy; The Power of Poseidon's Percy Jackson</p>
-        <img src="https://github.com/COMP426Spring2024/a01-laurennnjones/blob/main/Images/PoseidonTrident.png" alt="Footer Image">
+        <img src="Images/PoseidonTrident.png" alt="Footer Image">
     </footer>
 </body>
 </html>
+
